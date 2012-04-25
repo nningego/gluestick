@@ -1,4 +1,4 @@
 gluestick
 =========
 
-ror app for sharing code between machines via network
+ruby on rails application for sharing code between machines via network
