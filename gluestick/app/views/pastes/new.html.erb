@@ -1,0 +1,100 @@
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">Gluestick</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">Pastes</li>
+                        <li>
+								<span>
+									<span class="label label-warning">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-warning">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-success">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-success">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-default">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-important">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-info">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                        <li>
+								<span>
+									<span class="label label-inverse">&nbsp&nbsp</span>
+									<a href="#">a21deee7c825751</a>
+									<span class="" style="font-size:7pt;padding-top:0px;">04-MAY-2012, 15:00:01</span>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+       <%= form_for @paste do |f| %>
+     		<div class="span9">
+                <div class="well">
+                    <textarea class="pasteArea span12" rows="25" cols="210"></textarea>
+                    <div class="offset7">
+						<%= submit_tag("Paste", :class => "btn") %>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<% end %>
+    </div>
+</div>
+</body>
+</html>
+
+<!--
+<h1>New paste</h1>
+<%= render 'form' %>
+-->

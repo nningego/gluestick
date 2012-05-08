@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @paste.content %>
+</p>
+
+<p>
+  <b>Create ts:</b>
+  <%= @paste.create_ts %>
+</p>
+
+
+<%= link_to 'Edit', edit_paste_path(@paste) %> |
+<%= link_to 'Back', pastes_path %>
