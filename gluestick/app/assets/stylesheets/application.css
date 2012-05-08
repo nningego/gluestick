@@ -1,59 +1,17 @@
-.commandContainer{
-	border:0px solid black;
-	clear:left;
-	margin-left:10px;		
-	width:91%;
-}
-.commands{
-	text-align:right;
-	list-style-type:none;
-	padding-top:10px;
-	margin-right:10px;
-}
-.command{
-	display: inline
-}
-.pasteContainer{
-	border:1px solid black;
-	float:left;
-	height:395px;
-	margin-left:10px;
-	margin-top:-2px;
-	padding-top:0px;
-	width:65%;
-	
+/* ...
+*= require_self
+*= require bootstrap
+*= require bootstrap-responsive.min
+*= require_tree .
+*/
+body {
+padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 .pasteArea{
-	border:0px;
-	resize:none;
+border:0px;
+resize:none;
+background:whiteSmoke;
 }
-.topContainer{
-	border-bottom:1px solid black;
-	height:40px;	
-	margin-bottom:10px;	
-	margin-left:10px;
-	width:91%;
-}
-.trendContainer{		
-	border:1px solid black;
-	float:left;		
-	font-size:10pt;
-	height:395px;
-	margin-left:10px;
-	overflow-y:scroll;
-	width:25%;		
-}
-.trends{
-
-	list-style-type:none;
-}
-.trend{
-	padding-bottom:5px;
-}
-.trendTimestamp{
-	font-size:8pt;
-}
-.url{
-	border:1px solid black;
-	width:300px;
+.sidebar-nav {
+padding: 9px 0;
 }
