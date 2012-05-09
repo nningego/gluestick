@@ -2,8 +2,9 @@ class PastesController < ApplicationController
   # GET /pastes
   # GET /pastes.json
   def index
-#    @pastes = Paste.all
+    @pastes = Paste.all
     @paste = Paste.new
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @pastes }
