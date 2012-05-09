@@ -8,9 +8,9 @@ body {
 padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 .pasteArea{
-border:0px;
+border:2px solid #cccccc;
 resize:none;
-background:whiteSmoke;
+background:AliceBlue;
 }
 .sidebar-nav {
 padding: 9px 0;

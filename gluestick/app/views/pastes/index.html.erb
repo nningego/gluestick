@@ -8,8 +8,8 @@
                 </ul>
             </div>
         </div>
-    </div>
-</div>
+    </div> <!--navbar-inner-->
+</div> <!--navbar navbar-fixed-top-->
 <div class="container">
     <div class="container-fluid">
         <div class="row-fluid">
@@ -34,18 +34,16 @@
 									<span class="label label-inverse">&nbsp&nbsp</span>
 						-->
                     </ul>
-                </div>
-            </div>
-       <%= form_for @paste do |f| %>
-     		<div class="span9">
+                </div> <!--well-->
+            </div><!--span3-->
+       <%= form_for @paste do |f| %>			
+    		<div class="span9">				
                 <div class="well">					
-    				<%= f.text_area(:content, :rows=>25, :cols=>210, :class=>'pasteArea span12') %>
-                    <div class="offset7">
-						<%= submit_tag("Paste", :class => "btn") %>
-                    </div>
-                </div>
-            </div>
-        </div>
+    				<%= f.text_area(:content, :class=>'pasteArea span12') %>						
+					<%= submit_tag("Paste", :class => 'btn btn-primary') %>             
+                </div>	
+        	</div> <!--span9-->
 		<% end %>
+		</div>
     </div>
 </div>
