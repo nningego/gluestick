@@ -46,7 +46,7 @@ class PastesController < ApplicationController
       if @paste.save
         #format.html { redirect_to @paste, :notice => 'Paste was successfully created.' }
         #format.json { render :json => @paste, :status => :created, :location => @paste }
-        puts 'xx11122ss'
+
         format.html { redirect_to '/pastes', :notice => 'Paste was successfully created.' }
         #format.json { render :json => @paste, :status => :created, :location => @paste }
 

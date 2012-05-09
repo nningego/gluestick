@@ -79,8 +79,8 @@
             </div>
        <%= form_for @paste do |f| %>
      		<div class="span9">
-                <div class="well">
-                    <textarea class="pasteArea span12" rows="25" cols="210"></textarea>
+                <div class="well">					
+    				<%= f.text_area(:content, :rows=>25, :cols=>210, :class=>'pasteArea span12') %>
                     <div class="offset7">
 						<%= submit_tag("Paste", :class => "btn") %>
                     </div>
