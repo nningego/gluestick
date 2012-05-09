@@ -14,7 +14,7 @@ Copyright 2012 Matthew Huckaby, Nishitha Ningegowda, Kunal Jain, Yuan Duan
 
 ---
 
-Ruby on Rails application for sharing code between machines via network
+Ruby on Rails application for sharing code/pastes between machines
 
 - Rails v3.2.1 
 	http://rubyonrails.org/
@@ -22,11 +22,5 @@ Ruby on Rails application for sharing code between machines via network
 - Twitter Bootstrap v2.0.3
 	http://twitter.github.com/bootstrap/
 
-Notes/cmd history
-==================
-Create the app:
-rails new gluestick
-
-start server:
-rails server
-
+- jQuery v1.7.2
+	http://jquery.com
