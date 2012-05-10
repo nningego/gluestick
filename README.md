@@ -14,7 +14,7 @@ Copyright 2012 Matthew Huckaby, Nishitha Ningegowda, Kunal Jain, Yuan Duan
 
 ---
 
-Ruby on Rails application for sharing code/pastes between machines
+Ruby on Rails application for copy/pasting code or text between machines
 
 - Rails v3.2.1 
 	http://rubyonrails.org/
