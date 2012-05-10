@@ -20,7 +20,7 @@
 						<% @pastes.each do |paste| %>
                         <li>
 							<span>
-								<span class="badge badge-warning">&nbsp</span>
+								<span class='icon-share-alt'>&nbsp</span>
 								<a href="#" onclick='jqLinkTo(<%=paste.id%>)'><span class="" style="font-size:9pt;padding-top:0px;"><%=paste.created_at%></span></a>
                                 </span>
 							</span>
@@ -38,9 +38,14 @@
             </div><!--span3-->
        <%= form_for @paste do |f| %>			
     		<div class="span9">				
-                <div class="well">					
-    				<%= f.text_area(:content, :class=>'pasteArea span12') %>						
-					<%= submit_tag("Paste", :class => 'btn btn-primary') %>             
+                <div class="well">
+					<div id="validation-msg" class="alert alert-error" style="display:none;">
+					  <a class="close" data-dismiss="alert" href="#">x</a>
+					  <h4 class="alert-heading">Error</h4>
+						<span>Paste cannot be null or empty</span>
+					</div>
+    				<%= f.text_area(:content, :class=>'pasteArea span12') %>
+					<input type='button' class='btn btn-primary' value='Paste' onclick='validatePaste()'>
                 </div>	
         	</div> <!--span9-->
 		<% end %>

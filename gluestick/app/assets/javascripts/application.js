@@ -15,3 +15,12 @@ function jqLinkTo(id){
         }
 	)
 }
+
+function validatePaste(){
+	if($('#paste_content')[0].value){
+		$("#new_paste")[0].submit();
+	}else{
+		$("#validation-msg").fadeIn(100)
+	}
+}
+
