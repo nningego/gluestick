@@ -21,18 +21,17 @@
                         <li>
 							<span>
 								<span class='icon-share-alt'>&nbsp</span>
-								<a href="#" onclick='jqLinkTo(<%=paste.id%>)'><span class="" style="font-size:9pt;padding-top:0px;"><%=paste.created_at%></span></a>
-                                </span>
+								<% # TODO remove this and apply remote=> true%>
+								<a href='#' onclick='jqLinkTo(<%=paste.id%>)'>
+									<span style="font-size:9pt;padding-top:0px;"><%=paste.created_at%></span>
+								</a>
+
+								<%= link_to(paste, :confirm=> 'Are you sure?', :method => :delete) do %>
+									<span class='icon-trash'>&nbsp</span>
+								<% end %>
 							</span>
                         </li>
 						<% end %>									
-						<!--
-						<span class="label label-success">&nbsp&nbsp</span>
-									<span class="label label-default">&nbsp&nbsp</span>
-									<span class="label label-important">&nbsp&nbsp</span>
-									<span class="label label-info">&nbsp&nbsp</span>
-									<span class="label label-inverse">&nbsp&nbsp</span>
-						-->
                     </ul>
                 </div> <!--well-->
             </div><!--span3-->
@@ -52,3 +51,4 @@
 		</div>
     </div>
 </div>
+

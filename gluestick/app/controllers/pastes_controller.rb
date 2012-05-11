@@ -4,7 +4,7 @@ class PastesController < ApplicationController
   def index
     @pastes = Paste.all
     @paste = Paste.new
-    
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @pastes }
@@ -45,12 +45,8 @@ class PastesController < ApplicationController
 
     respond_to do |format|
       if @paste.save
-        #format.html { redirect_to @paste, :notice => 'Paste was successfully created.' }
-        #format.json { render :json => @paste, :status => :created, :location => @paste }
-
-        format.html { redirect_to '/pastes', :notice => 'Paste was successfully created.' }
-        #format.json { render :json => @paste, :status => :created, :location => @paste }
-
+	format.html { redirect_to '/pastes', :notice => 'Paste was successfully created.' }
+        format.json { render :json => @paste, :status => :created, :location => @paste }
       else
         format.html { render :action => "new" }
         format.json { render :json => @paste.errors, :status => :unprocessable_entity }

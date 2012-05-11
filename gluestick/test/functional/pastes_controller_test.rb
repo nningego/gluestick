@@ -18,7 +18,7 @@ class PastesControllerTest < ActionController::TestCase
 
   test "should create paste" do
     assert_difference('Paste.count') do
-      post :create, :paste => @paste.attributes
+      post :create, :paste => { :content => @paste.content }
     end
 
     assert_redirected_to paste_path(assigns(:paste))
@@ -35,7 +35,7 @@ class PastesControllerTest < ActionController::TestCase
   end
 
   test "should update paste" do
-    put :update, :id => @paste, :paste => @paste.attributes
+    put :update, :id => @paste, :paste => { :content => @paste.content }
     assert_redirected_to paste_path(assigns(:paste))
   end
 
