@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="#">Gluestick</a>
+            <a class="brand" href='/pastes'>Gluestick</a>
             <div class="nav-collapse">
                 <ul class="nav">
                     <li><a href="https://github.com/mhuckaby/gluestick/blob/master/README.md">About</a></li>
@@ -20,15 +20,19 @@
 						<% @pastes.each do |paste| %>
                         <li>
 							<span>
-								<span class='icon-share-alt'>&nbsp</span>
 								<% # TODO remove this and apply remote=> true%>
 								<a href='#' onclick='jqLinkTo(<%=paste.id%>)'>
 									<span style="font-size:9pt;padding-top:0px;"><%=paste.created_at%></span>
 								</a>
 
+                                <a href='/pastes/<%=paste.id%>/edit' onclick='jqLinkTo(<%=paste.id%>)'>
+                                    <span class='icon-edit'></span>
+                                </a>
+
 								<%= link_to(paste, :confirm=> 'Are you sure?', :method => :delete) do %>
 									<span class='icon-trash'>&nbsp</span>
 								<% end %>
+
 							</span>
                         </li>
 						<% end %>									
@@ -44,7 +48,7 @@
 						<span>Paste cannot be null or empty</span>
 					</div>
     				<%= f.text_area(:content, :class=>'pasteArea span12') %>
-					<input type='button' class='btn btn-primary' value='Paste' onclick='validatePaste()'>
+					<input id="paste_button" type='button' class='btn btn-primary' value='Paste' onclick='validatePaste()'>
                 </div>	
         	</div> <!--span9-->
 		<% end %>

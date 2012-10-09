@@ -6,6 +6,7 @@ function jqLinkTo(id){
         function(jsonData){
         	if(jsonData){
 				$('#paste_content')[0].value=jsonData.content
+                $('#paste_button').remove()
             }else{
 				alert('Error retrieving paste content')
             }
