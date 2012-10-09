@@ -16,3 +16,6 @@
 
 # Ignore all TextMate generated files
 /.DS_Store
+
+# Ignore Intellij configuration files
+/.idea/*
