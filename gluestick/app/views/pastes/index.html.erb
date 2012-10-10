@@ -1,18 +1,3 @@
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href='/pastes'>Gluestick</a>
-            <div class="nav-collapse">
-                <ul class="nav">
-                    <li><a href="https://github.com/mhuckaby/gluestick/blob/master/README.md">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> <!--navbar-inner-->
-</div> <!--navbar navbar-fixed-top-->
-<div class="container">
-    <div class="container-fluid">
-        <div class="row-fluid">
             <div class="span3">
                 <div class="well sidebar-nav">
                     <ul class="nav nav-list">
@@ -22,7 +7,7 @@
 							<span>
 								<% # TODO remove this and apply remote=> true%>
 								<a href='#' onclick='jqLinkTo(<%=paste.id%>)'>
-									<span style="font-size:9pt;padding-top:0px;"><%=paste.created_at%></span>
+									<span style="font-size:9pt;padding-top:0;"><%=paste.created_at%></span>
 								</a>
 
                                 <a href='/pastes/<%=paste.id%>/edit' onclick='jqLinkTo(<%=paste.id%>)'>
@@ -52,7 +37,4 @@
                 </div>	
         	</div> <!--span9-->
 		<% end %>
-		</div>
-    </div>
-</div>
 
