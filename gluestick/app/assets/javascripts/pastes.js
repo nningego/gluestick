@@ -1,6 +1,6 @@
 
 function jqLinkTo(id){
-	var url = 'pastes/' + id
+	var url = '/pastes/' + id
 	$.getJSON(
 		url,
         function(jsonData){
