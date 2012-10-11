@@ -1,21 +1,24 @@
 <%= form_for(@paste) do |f| %>
-  <% if @paste.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@paste.errors.count, "error") %> prohibited this paste from being saved:</h2>
+    <% if @paste.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@paste.errors.count, "error") %> prohibited this paste from being saved:</h2>
+          <ul>
+            <% @paste.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-      <ul>
-      <% @paste.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div><h4><%= @paste.created_at %></h4></div>
+
+    <div class="field">
+      <%= f.text_area(:content, :class => 'pasteArea span12') %>
     </div>
-  <% end %>
+    <div class="actions">
+      <button type="submit" class="btn btn-primary" onclick='<%= f.submit %>'>
+        Update Paste
+      </button>
+    </div>
 
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
