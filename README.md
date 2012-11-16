@@ -24,3 +24,12 @@ Ruby on Rails application for copy/pasting code or text between machines
 
 - jQuery v1.7.2
 	http://jquery.com
+
+---
+
+Quickstart:
+
+bundle exec rake db:migrate
+
+rails server
+
