@@ -46,7 +46,7 @@ class PastesController < ApplicationController
 
     respond_to do |format|
       if @paste.save
-	      format.html { redirect_to pastes_url, :notice => 'Paste was successfully created.' }
+        format.html { redirect_to pastes_url, :notice => 'Paste was successfully created.' }
         format.json { render :json => @paste, :status => :created, :location => @paste }
       else
         format.html { render :action => "new" }

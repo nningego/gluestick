@@ -4,21 +4,20 @@
       <li class="nav-header">Pastes</li>
       <% @pastes.each do |paste| %>
           <li>
-							<span>
-								<% # TODO remove this and apply remote=> true %>
-                              <a href='/pastes/<%= paste.id %>' onclick='jqLinkTo(<%=paste.id%>)'>
-                                <span style="font-size:9pt;padding-top:0;"><%= paste.created_at %></span>
-                              </a>
+				<span>
+					<% # TODO remove this and apply remote=> true %>
+                           <a href='/pastes/<%= paste.id %>' onclick='jqLinkTo(<%=paste.id%>)'>
+                             <span style="font-size:9pt;padding-top:0;"><%= paste.created_at %></span>
+                           </a>
 
-                                <a href='/pastes/<%= paste.id %>/edit' onclick='jqLinkTo(<%=paste.id%>)'>
-                                  <span class='icon-edit'></span>
-                                </a>
+                           <a href='/pastes/<%= paste.id %>/edit' onclick='jqLinkTo(<%=paste.id%>)'>
+                             <span class='icon-edit'></span>
+                           </a>
 
-                              <%= link_to(paste, :confirm => 'Are you sure?', :method => :delete) do %>
-									<span class='icon-trash'>&nbsp</span>
-								<% end %>
-
-							</span>
+                           <%= link_to(paste, :confirm => 'Are you sure?', :method => :delete) do %>
+			               <span class='icon-trash'>&nbsp</span>
+				           <% end %>
+				</span>
           </li>
       <% end %>
     </ul>
