@@ -14,6 +14,7 @@ class PastesController < ApplicationController
   # GET /pastes/1
   # GET /pastes/1.json
   def show
+    @pastes = Paste.all
     @paste = Paste.find(params[:id])
 
     respond_to do |format|
