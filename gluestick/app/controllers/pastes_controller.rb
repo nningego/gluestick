@@ -2,7 +2,7 @@ class PastesController < ApplicationController
   # GET /pastes
   # GET /pastes.json
   def index
-    @pastes = Paste.all
+    @pastes = Paste.order("created_at DESC").all
     @paste = Paste.new
 
     respond_to do |format|
@@ -14,7 +14,7 @@ class PastesController < ApplicationController
   # GET /pastes/1
   # GET /pastes/1.json
   def show
-    @pastes = Paste.all
+    @pastes = Paste.order("created_at DESC").all
     @paste = Paste.find(params[:id])
 
     respond_to do |format|
