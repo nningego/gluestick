@@ -10,6 +10,38 @@
         </div>
         <%= f.text_area(:content, :class => 'pasteArea span12') %>
         <input id="paste_button" type='button' class='btn btn-primary' value='Paste' onclick='validatePaste()'>
+        <input id="clear_button" type='button' class='btn btn-primary disabled' value='Clear' onclick='clearPaste()'>
       </div><!--well-->
     </div> <!--span9-->
 <% end %>
+<script>
+
+    $(document).ready(function() {
+        var clearButton = $('#clear_button');
+
+        var pasteContent = $('#paste_content');
+
+        pasteContent.keyup(function(event){
+            if(event.target.value.length) {
+                clearButton.removeClass('disabled');
+            }else {
+                clearButton
+                    .addClass('disabled')
+                    .attr('disabled', 'disabled');
+            }
+        });
+
+        if(pasteContent.val()) {
+            clearButton.removeClass('disabled');
+        }
+
+    });
+
+    function clearPaste() {
+        if(!$('#clear_button').hasClass('disabled')){
+            $('#paste_content').val('');
+            $('#clear_button').addClass('disabled');
+        }
+    }
+
+</script>
